@@ -72,3 +72,35 @@ c1.com = 'BMW'
 c2.avg = '20'
 
 print(c1.avg,c1.com,c1.wheels,c2.avg,c2.com,c2.wheels)
+
+
+class Student:
+    school = 'MT. High'
+    def __init__(self,m1,m2,m3):  ### instance variables to work with instance methods
+            self.m1 = m1
+            self.m2 = m2
+            self.m3 = m3
+
+    def avg(self):               ### this is instance method which will be called later on
+        return (self.m1+self.m2+self.m3)/3
+
+
+    @classmethod
+    def getschool(cls):               ### Class method with decorator ....(wihout decorator it wont work)
+        return cls.school
+
+    @staticmethod
+    def info():
+        print('Student class with info as Static method')
+
+s1 = Student(10,23,15)
+s2 = Student(34,67,34)
+
+
+print(s1.avg())
+print(s2.avg())
+
+print(Student.getschool())
+
+Student.info()
+
