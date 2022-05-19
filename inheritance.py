@@ -1,3 +1,10 @@
+# from Class import *
+#
+# fm = Computer('ryzen 7','32 GB')
+#
+# print(fm.cpu)
+
+
 class A:
     def __init__(self):         ### inheritance constructor to be called in sub class
         print("init class A ...! ")
@@ -19,13 +26,20 @@ class B():
     def feature4(self):
         print('feature 4 on ..!')
 
-# class C(A):     ### single level inheritance
+# b = B()
+
+# class C(B):     ### single level inheritance
 #     def feature1(self):
 #         print('feature 1 on ..!')
 #
 # class C(B):     ### multilevel inheritance when B inherits from A
+#         def __init__(self):
+#             super().__init__()
+#
 #         def feature5(self):
 #             print('feature 5 in on..!')
+
+# c = C()
 
 # class C(A,B):   ### Multiple inheritance
 #         def feature5(self):
@@ -38,11 +52,12 @@ class C(A,B):
 
     def feat(self):
         super().feature2()
+c = C()
 
-b = B()    ### created object of class
-b
-
-f = C()
-f.feat()   ### called method from super class 
+# b = B()    ### created object of class
+# b
+#
+# f = C()
+# f.feat()   ### called method from super class
 
 
